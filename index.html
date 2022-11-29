@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first website</title>
+  </head>
+  <body>
+    <h1>Hello world!</h1>
+    <p>Welcome to my first website.</p>
+    <h2>Web Security</h2>
+    <p id="web-security-question">
+      How would you advise a potential client to secure his/her website from web
+      security attacks? Note: the word count for your answer should not be
+      greater than 250 words
+    </p>
+    <p id="web-security-answer">Answer:</p>
+    <p>
+      I would start by advising a potential client to familiarize themselves
+      with the most common website threats. In that way we can start to look at
+      how to minimize the attacks.
+    </p>
+
+    <p>
+      One common threat is Cross-Site Scripting (XSS) which involves injecting
+      malicious code into trusted websites. To minimize vulnerability to XSS, a
+      developer should ensure that pages on the website that accepts user input,
+      filter out code input, such as HTML and JavaScript.
+    </p>
+
+    <p>
+      Another threat is Cross-Site Request Forgery (CSRF). While an XSS attack
+      exploits the site's trust in external users, CSRF attacks exploit users'
+      trust in the site by tricking them into believing that transmitted data
+      comes from the site. To limit the attack, you must be careful to log out
+      of websites when you are not using them, and to keep accounts separate. A
+      good practice is implementation of automatic user timeout.
+    </p>
+
+    <p>
+      We also have SQL injection. An SQL injection is a type of security breach
+      where an attacker uses a piece of SQL code to manipulate a database and
+      gain access to potentially valuable information. For clients concerned
+      about SQL injection, they should: use the latest software versions,
+      continuously scan web applications, and use a firewall.
+    </p>
+
+    <p>
+      To make web security easier to handle I would also advise the client to
+      use trusted third-party solutions. Authentications are more secure with
+      frameworks such as OneLogin. And you could use NodeJS for sanitation
+      packages that examine HTML documents, which can protect against XSS
+      attacks.
+    </p>
+
+    <p>Sources:</p>
+    <ul>
+      <li>
+        https://no.wikipedia.org/wiki/Forfalskning_av_foresp%C3%B8rsler_p%C3%A5_tvers_av_nettsteder
+      </li>
+      <li>
+        https://www.kaspersky.no/resource-center/definitions/sql-injection
+      </li>
+      <li>
+        https://www.kaspersky.no/resource-center/definitions/what-is-a-cross-site-scripting-attack
+      </li>
+      <li>
+        https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security
+      </li>
+      <li>
+        https://noroff-content.gitlab.io/feu/wct/web-security.html
+      </li>
+    </ul>
+  </body>
+</html>
