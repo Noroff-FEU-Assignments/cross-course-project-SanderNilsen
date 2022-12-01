@@ -12,43 +12,38 @@
       security attacks? Note: the word count for your answer should not be
       greater than 250 words
     </p>
-    <p id="web-security-answer">Answer:</p>
-    <p>
-      I would start by advising a potential client to familiarize themselves
-      with the most common website threats. In that way we can start to look at
-      how to minimize the attacks.
-    </p>
+    <p id="web-security-answer">
+      Answer: I would start by advising a potential client to familiarize
+      themselves with the most common website threats. In this way we can start
+      to look at how to minimize the attacks.<br />
 
-    <p>
       One common threat is Cross-Site Scripting (XSS) which involves injecting
-      malicious code into trusted websites. To minimize vulnerability to XSS, a
-      developer should ensure that pages on the website that accepts user input,
-      filter out code input, such as HTML and JavaScript.
-    </p>
+      malicious code into trusted websites. To minimize vulnerability to XSS,
+      one should ensure that pages on the site that accepts user input, filter
+      out code input, such as HTML and JavaScript.<br />
 
-    <p>
       Another threat is Cross-Site Request Forgery (CSRF). While an XSS attack
       exploits the site's trust in external users, CSRF attacks exploit users'
       trust in the site by tricking them into believing that transmitted data
       comes from the site. To limit the attack, you must be careful to log out
       of websites when you are not using them, and to keep accounts separate. A
-      good practice is implementation of automatic user timeout.
-    </p>
+      good practice is implementation of automatic user timeout.<br />
 
-    <p>
       We also have SQL injection. An SQL injection is a type of security breach
       where an attacker uses a piece of SQL code to manipulate a database and
       gain access to potentially valuable information. For clients concerned
       about SQL injection, they should: use the latest software versions,
-      continuously scan web applications, and use a firewall.
-    </p>
+      continuously scan web applications, and use a firewall.<br />
 
-    <p>
-      To make web security easier to handle I would also advise the client to
-      use trusted third-party solutions. Authentications are more secure with
-      frameworks such as OneLogin. And you could use NodeJS for sanitation
-      packages that examine HTML documents, which can protect against XSS
-      attacks.
+      I would also recommend trusted third-party solutions. This will, for a
+      client, help making web security easier to handle. For authentications
+      there are solutions like “OneLogin.” And sanitation packages, from NodeJS,
+      that examine HTML documents is also something to consider. This can
+      protect against XSS attacks.<br />
+
+      Lastly, I would recommend having an SSL certificate. This encrypts links
+      between server and browser and is needed for keeping users' information
+      private and secure.<br />
     </p>
 
     <p>Sources:</p>
@@ -65,9 +60,7 @@
       <li>
         https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security
       </li>
-      <li>
-        https://noroff-content.gitlab.io/feu/wct/web-security.html
-      </li>
+      <li>https://noroff-content.gitlab.io/feu/wct/web-security.html</li>
     </ul>
   </body>
 </html>
