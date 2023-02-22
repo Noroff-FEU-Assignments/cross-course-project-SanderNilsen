@@ -1,78 +1,157 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="css/style.css" />
-    <title>My first website</title>
+    <title>Home | RainyDays</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="description" content="Homepage for RainyDays, where you'll find a wide 
+    selection of high-quality jackets designed to keep you warm and protected in any weather.">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-    <h2>Web Security</h2>
-    <p id="web-security-question">
-      How would you advise a potential client to secure his/her website from web
-      security attacks? Note: the word count for your answer should not be
-      greater than 250 words
-    </p>
-    <p id="web-security-answer">
-      Answer:
-      <li>
-        I would start by advising a potential client to familiarize themselves
-        with the most common website threats. In this way we can start to look
-        at how to minimize the attacks.
-      </li>
+    <header>
+      <div class="header-container">
+        <input type="checkbox" id="menu-checkbox" >
+        <label for="menu-checkbox" class="hamburger_icon">
+          <i class="fas fa-bars"></i>
+        </label>
 
-      <li>
-        One common threat is Cross-Site Scripting (XSS) which involves injecting
-        malicious code into trusted websites. To minimize vulnerability to XSS,
-        one should ensure that pages on the site that accepts user input, filter
-        out code input, such as HTML and JavaScript.
-      </li>
+        <a class="logo" href="index.html" >
+          <img class="logo-img" src="images/rainydays-logo1.png" alt="logo-header" >
+        </a>
 
-      <li>
-        Another threat is Cross-Site Request Forgery (CSRF). While an XSS attack
-        exploits the site's trust in external users, CSRF attacks exploit users'
-        trust in the site by tricking them into believing that transmitted data
-        comes from the site. To limit the attack, you must be careful to log out
-        of websites when you are not using them, and to keep accounts separate.
-        A good practice is implementation of automatic user timeout.
-      </li>
+        <nav>
+          <ul>
+            <li><a href="products.html">Clothing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-      <li>
-        We also have SQL injection. An SQL injection is a type of security
-        breach where an attacker uses a piece of SQL code to manipulate a
-        database and gain access to potentially valuable information. For
-        clients concerned about SQL injection, they should: use the latest
-        software versions, continuously scan web applications, and use a
-        firewall.
-      </li>
+        <div class="nav-right">
+          <form>
+            <label>
+              <input class="searchbar" type="text" placeholder="Search" >
+            </label>
+          </form>
+          <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
+        </div>
 
-      <li>
-        I would also recommend trusted third-party solutions. For
-        authentications there are solutions like OneLogin, and for sanitizing
-        code there are packages from NodeJS.
-      </li>
+      </div>
+      <div class="bottom-bar-header">
+        <p>SALE! Up to 50% off</p>
+      </div>
+    </header>
 
-      <li>
-        Lastly, I would recommend having an SSL certificate. This encrypts links
-        between server and browser and is needed for keeping users' information
-        private and secure.
-      </li>
-      <br />
+    <main>
+      <div class="main-mountain-background">
+        <img src="images/main-mountain-background.jpg" alt="main-cover" >
+      </div>
 
-      Sources:
-      <li>
-        https://no.wikipedia.org/wiki/Forfalskning_av_foresp%C3%B8rsler_p%C3%A5_tvers_av_nettsteder
-      </li>
-      <li>
-        https://www.kaspersky.no/resource-center/definitions/sql-injection
-      </li>
-      <li>
-        https://www.kaspersky.no/resource-center/definitions/what-is-a-cross-site-scripting-attack
-      </li>
-      <li>
-        https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security
-      </li>
-      <li>https://noroff-content.gitlab.io/feu/wct/web-security.html</li>
-    </p>
+      <a href="products.html">
+        <div class="slider">
+          <div class="slide">
+            <img src="images/slide1-app.jpg" alt="slide 1" >
+            <img src="images/slide2-hiking.jpg" alt="slide 2" >
+            <img src="images/slide3-skiing.jpg" alt="slide 3" >
+          </div></div
+      ></a>
+
+      <section>
+        <div class="categories_container">
+          <div class="rectangle"></div>
+          <div class="category_heading"><h3>Explore Categories</h3></div>
+          <div class="category category1">
+            <a href="products.html" id="hiking"
+              ><img src="images/category-hiking.jpg" alt="hiking" >
+              <div class="bottom-left-text transition transform">Hiking</div>
+            </a>
+          </div>
+          <div class="category category2">
+            <a href="products.html" id="camping"
+              ><img src="images/category-camping.jpg" alt="camping" >
+              <div class="bottom-left-text transition transform">Camping</div>
+            </a>
+          </div>
+          <div class="category category3">
+            <a href="products.html" id="canoeing"
+              ><img src="images/category-canoeing.jpg" alt="canoeing" >
+              <div class="bottom-left-text transition transform">Canoeing</div>
+            </a>
+          </div>
+          <div class="category category4">
+            <a href="products.html" id="skiing"
+              ><img src="images/category-skiing.jpg" alt="skiing" >
+              <div class="bottom-left-text transition transform">Skiing</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="categories_mobile">
+        <div class="rectangle"></div>
+        <div id="men-category">
+          <a href="products.html">
+            <img src="images/category-men.jpg" alt="Men" >
+            <div class="bottom-left-text">Men's</div>
+          </a>
+        </div>
+        <div id="women-category">
+          <a href="products.html">
+            <img src="images/category-women.jpg" alt="Women" >
+            <div class="bottom-left-text">Woman's</div>
+          </a>
+        </div>
+      </div>
+
+      <section>
+        <div class="scott-container">
+          <h3 class="scott_text">NEW arrivals from SCOTT</h3>
+          <div class="scott-product">
+            <p class="scott-price">999,-</p>
+            <img class="scott-img" src="images/product6.png" alt="Scott_Product" >
+          </div>
+          <div class="scott-product">
+            <p class="scott-price">999,-</p>
+            <img class="scott-img" src="images/product7.png" alt="Scott_Product" >
+          </div>
+          <div class="scott-product">
+            <p class="scott-price">999,-</p>
+            <img class="scott-img" src="images/product3.png" alt="Scott_Product" >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="images/rainydays-logo2.png" id="logo2" alt="logo2" >
+
+      <div class="about-us-container">
+        <h3>ABOUT US</h3>
+        <ul>
+          <li><a href="about.html">This is RainyDays</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="costumer-service-container">
+        <h3>COSTUMER SERVICE</h3>
+        <ul>
+          <li><a href="contact.html">Shopping & Delivery</a></li>
+          <li><a href="contact.html">Return Policy</a></li>
+          <li><a href="contact.html">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <img src="images/facebook-icon.png" alt="facebook" >
+        <img src="images/instagram-icon.png" alt="instagram" >
+      </div>
+    </footer>
   </body>
 </html>
