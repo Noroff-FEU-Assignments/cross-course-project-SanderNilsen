@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Page of choosen product">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,13 +31,14 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
@@ -50,7 +50,8 @@
         <a class="theme-color" href="products.html">Clothing</a> >
         <a class="theme-color" href="product.html">Fleece</a>
       </h3>
-      <div class="main-product-container">
+
+      <section class="main-product-container">
         <div class="product-container">
           <div class="product">
             <img class="product_img" src="images/product1.png" alt="jacket" >
@@ -68,7 +69,7 @@
 
         <div class="product-info-container">
           <div class="product-header">
-            <h2>Patagonia</h2>
+            <h1 class="margin0">Patagonia</h1>
             <p>Better Sweater Fleece Jacket - Men's</p>
             <p><span class="price">599,-</span> <s>1199,-</s></p>
           </div>
@@ -105,10 +106,10 @@
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
       <h2 class="heading-suggestions">YOU MIGHT ALSO LIKE</h2>
-      <div class="product-suggestions">
+      <section class="product-suggestions">
         <div class="product product2">
           <a href="product.html"><img class="product_img" src="images/product2.png" alt="product2" ></a>
           <h3>First Watch</h3>
@@ -133,7 +134,7 @@
           <p>Focus Jacket - Softshell - Woman's</p>
           <p><span class="price">599</span> <s>1199,-</s></p>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>

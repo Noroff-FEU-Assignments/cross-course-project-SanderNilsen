@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Checkout-success-page">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,26 +31,27 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
     </header>
 
     <main>
-      <div class="checkout-container checkoutsuccess-container">
+      <section class="checkout-container checkoutsuccess-container">
         <img src="images/Check-Logo.png" alt="check-logo">
         <h1 class="theme-color">Thank you for your order!</h1>
         <p class="theme-color">The order confirmation with details and a link to track 
           its progress has been sent to your email address.</p>
         <a class="button" href="products.html">CONTINUE SHOPPING</a>
-      </div>
+      </section>
     </main>
 
     <footer>

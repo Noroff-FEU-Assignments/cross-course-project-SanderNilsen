@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Contact page and FAQ" >
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,13 +31,14 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
@@ -47,19 +47,26 @@
     <main>
       <div class="contact-container">
         <div class="contact">
-          <h2 class="theme-color bottom-border">Contact</h2>
+          <h1 class="theme-color bottom-border">Contact</h1>
           <p class="theme-color">If you have questions or problems regarding your product, please check our FAQs.</p>
           <p class="theme-color">
             If you didn’t find the answer you were looking for, then fill out the contact form below.
           </p>
           <form class="checkout-form contact-form">
-            <div><input class="input-style" placeholder="First Name*" type="text" ></div>
-            <div><input class="input-style" placeholder="Last Name*" type="text" ></div>
-            <div><input class="input-style" placeholder="E-Mail*" type="text" ></div>
-            <div><input class="input-style input-message" placeholder="Message*" type="text" ></div>
+            <fieldset>
+              <legend class="theme-color">Contact us</legend>
+              <label for="first-name"></label>
+              <input class="input-style" id="first-name" placeholder="First Name*" type="text" required>
+              <label for="last-name"></label>
+              <input class="input-style" id="last-name" placeholder="Last Name*" type="text" required>
+              <label for="e-mail"></label>
+              <input class="input-style" id="e-mail" placeholder="E-Mail*" type="text" required>
+              <label for="message"></label>
+              <textarea class="input-style input-message" id="message" placeholder="Message*" name="message" rows="5" cols="30" required></textarea>
+            </fieldset> 
+            <input class="contact-button" type="submit" value="SEND REQUEST"> 
           </form>
         </div>
-        <a class="button" href="index.html">SEND REQUEST</a>
       </div>
     </main>
 

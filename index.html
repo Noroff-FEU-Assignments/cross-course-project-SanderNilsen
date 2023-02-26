@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Homepage for RainyDays, where you'll find a wide 
     selection of high-quality jackets designed to keep you warm and protected in any weather.">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -33,22 +32,21 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <label>
-              <input class="searchbar" type="text" placeholder="Search" >
-            </label>
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
     </header>
 
-    <main>
-      <div class="main-mountain-background">
+    <main>      
+      <div class="main-mountain-background">      
         <img src="images/main-mountain-background.jpg" alt="main-cover" >
       </div>
 
@@ -58,38 +56,35 @@
             <img src="images/slide1-app.jpg" alt="slide 1" >
             <img src="images/slide2-hiking.jpg" alt="slide 2" >
             <img src="images/slide3-skiing.jpg" alt="slide 3" >
-          </div></div
-      ></a>
-
-      <section>
-        <div class="categories_container">
-          <div class="rectangle"></div>
-          <div class="category_heading"><h3>Explore Categories</h3></div>
-          <div class="category category1">
-            <a href="products.html" id="hiking"
-              ><img src="images/category-hiking.jpg" alt="hiking" >
-              <div class="bottom-left-text transition transform">Hiking</div>
-            </a>
-          </div>
-          <div class="category category2">
-            <a href="products.html" id="camping"
-              ><img src="images/category-camping.jpg" alt="camping" >
-              <div class="bottom-left-text transition transform">Camping</div>
-            </a>
-          </div>
-          <div class="category category3">
-            <a href="products.html" id="canoeing"
-              ><img src="images/category-canoeing.jpg" alt="canoeing" >
-              <div class="bottom-left-text transition transform">Canoeing</div>
-            </a>
-          </div>
-          <div class="category category4">
-            <a href="products.html" id="skiing"
-              ><img src="images/category-skiing.jpg" alt="skiing" >
-              <div class="bottom-left-text transition transform">Skiing</div>
-            </a>
           </div>
         </div>
+      </a>
+
+      <section class="categories_container">
+        <div class="rectangle"></div>
+        <div class="category_heading">
+          <h1 class="theme-color">Explore Categories</h1>
+        </div>
+        <div class="category category1">
+          <a href="products.html" id="hiking"><img src="images/category-hiking.jpg" alt="hiking" >
+            <div class="bottom-left-text transition transform">Hiking</div>
+          </a>
+        </div>
+        <div class="category category2">
+          <a href="products.html" id="camping"><img src="images/category-camping.jpg" alt="camping" >
+            <div class="bottom-left-text transition transform">Camping</div>
+          </a>
+        </div>
+        <div class="category category3">
+          <a href="products.html" id="canoeing"><img src="images/category-canoeing.jpg" alt="canoeing" >
+            <div class="bottom-left-text transition transform">Canoeing</div>
+          </a>
+        </div>
+        <div class="category category4">
+         <a href="products.html" id="skiing"><img src="images/category-skiing.jpg" alt="skiing" >
+           <div class="bottom-left-text transition transform">Skiing</div>
+         </a>
+       </div>
       </section>
 
       <div class="categories_mobile">
@@ -108,9 +103,8 @@
         </div>
       </div>
 
-      <section>
-        <div class="scott-container">
-          <h3 class="scott_text">NEW arrivals from SCOTT</h3>
+      <section class="scott-container">
+          <h2 class="scott_text">NEW arrivals from SCOTT</h2>
           <div class="scott-product">
             <p class="scott-price">999,-</p>
             <img class="scott-img" src="images/product6.png" alt="Scott_Product" >
@@ -123,7 +117,6 @@
             <p class="scott-price">999,-</p>
             <img class="scott-img" src="images/product3.png" alt="Scott_Product" >
           </div>
-        </div>
       </section>
     </main>
 

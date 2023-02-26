@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Page of choosen product(s)">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,21 +31,22 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
     </header>
 
     <main>
-      <h2 class="top-main-nav">Your bag (1)</h2>
-      <div class="bag-container">
+      <h1 class="top-main-nav">Your bag (1)</h1>
+      <section class="bag-container">
         <div class="product1">
           <img class="product_img" src="images/Product1.png" alt="product1" >
           <div class="informations">
@@ -77,15 +77,16 @@
               <td class="border">599,-</td>
             </tr>
           </table>
+
           <a class="button" href="checkout.html">GO TO CHECKOUT</a>
           <div>
             <a href="products.html">
-              <h3 class="continue-button"><- Continue Shopping</h3>
+              <h3 class="continue-button"> &lt- Continue Shopping</h3>
             </a>
           </div>
-          
         </div>
-      </div>
+        
+      </section>
     </main>
 
     <footer>

@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Checkout-page for name, address and payment">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,33 +31,39 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
     </header>
 
     <main>
-      <div class="checkout-container">
+      <section class="checkout-container">
         <h1 class="theme-color">Delivery & Payment</h1>
         <p>Fields maked with (*) must be completed.</p>
 
-        <h2 class="theme-color"><img class="checkout-icon" src="images/Step1-Icon.png" alt="checkout-step1"> Delivery details</h2>
         <form class="checkout-form">
-          <div><input class="input-style" placeholder="First Name*" type="text" ></div>
-          <div><input class="input-style" placeholder="Last Name*" type="text" ></div>
-          <div><input class="input-style" placeholder="Address*" type="text" ></div>
-          <div><input class="input-style" placeholder="E-Mail*" type="text" ></div>
-        </form>
+         <fieldset> 
+          <legend class="theme-color"><img class="checkout-icon" src="images/Step1-Icon.png" alt="checkout-step1"> Delivery details</legend>
+          <label for="firstname"></label>
+          <input class="input-style" id="firstname" placeholder="First Name*" type="text" required >
+          <label for="lastname"></label>
+          <input class="input-style" id="lastname" placeholder="Last Name*" type="text" required >
+          <label for="address"></label>
+          <input class="input-style" id="address" placeholder="Address*" type="text" required>
+          <label for="email"></label>
+          <input class="input-style" id="email" placeholder="E-Mail*" type="text" required>
+         </fieldset>
 
-        <h2 class="theme-color"><img class="checkout-icon" src="images/Step2-Icon.png" alt="checkout-step2"> Shipping</h2>
-        <form>
+        <fieldset>
+          <legend class="theme-color"><img class="checkout-icon" src="images/Step2-Icon.png" alt="checkout-step2"> Shipping</legend>
           <div>
             <input type="radio" id="pickup" name="shipping" checked >
             <label class="theme-color" for="pickup">Pickup in store (0,-)</label>
@@ -67,10 +72,10 @@
             <input type="radio" id="home-delivery" name="shipping" >
             <label class="theme-color" for="home-delivery">Home delivery (99,-)</label>
           </div>
-        </form>
+        </fieldset>
 
-        <h2 class="theme-color"><img class="checkout-icon" src="images/Step3-Icon.png" alt="checkout-step3"> Payment</h2>
-        <form>
+        <fieldset>
+        <legend class="theme-color"><img class="checkout-icon" src="images/Step3-Icon.png" alt="checkout-step3"> Payment</legend>
           <div>
             <input type="radio" id="vipps" name="payment" checked >
             <label class="theme-color" for="vipps">Vipps (0,-)</label>
@@ -79,10 +84,14 @@
             <input type="radio" id="invoice" name="payment" >
             <label class="theme-color" for="invoice">Invoice (79,-)</label>
           </div>
-        </form>
+          </fieldset>
+          
+          <input class="checkout-submit" type="submit" value="Pay">
+          
+          <a class="button checkoutsuccess-button" href="checkoutsuccess.html">PAY (599,-)</a>
 
-        <a class="button checkoutsuccess-button" href="checkoutsuccess.html">PAY (599,-)</a>
-      </div>
+        </form>
+      </section>
     </main>
 
     <footer>

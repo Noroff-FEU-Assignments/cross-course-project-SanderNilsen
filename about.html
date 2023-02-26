@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Information and location for RainyDays">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
   </head>
 
@@ -32,13 +31,14 @@
         </nav>
 
         <div class="nav-right">
-          <form>
-            <input class="searchbar" type="text" placeholder="Search" >
+          <form role="search">
+            <label for="searchbar"></label>
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
           <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
         </div>
-
       </div>
+
       <div class="bottom-bar-header">
         <p>SALE! Up to 50% off</p>
       </div>
@@ -47,7 +47,7 @@
     <main>
       <div class="main-about-container">
         <section class="about-container">
-          <h2 class="theme-color bottom-border">About us</h2>
+          <h1 class="theme-color bottom-border">About us</h1>
           <p class="theme-color">
             At RainyDays, we are passionate about the outdoors. Located in Trondheim, we have been offering the highest
             quality jackets for skiing, canoeing, camping, and hiking for over 10 years. We know that the right gear is
