@@ -2,28 +2,32 @@
 
 <html lang="en">
   <head>
-    <title>Patagonia Fleece</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" >
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" >
-    <meta name="description" content="Page of choosen product">
-    <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
+    <title>Product</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Page of chosen product" />
+    <script src="js/product.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <input type="checkbox" id="menu-checkbox" >
-        <label for="menu-checkbox" class="hamburger_icon">
-          <i class="fas fa-bars"></i>
-        </label>
-
-        <a class="logo" href="index.html" >
-          <img class="logo-img" src="images/rainydays-logo1.png" alt="logo-header" >
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="images/rainydays-logo1.png" alt="logo-header" />
         </a>
 
         <nav>
-          <ul>
+          <div class="hamburger-menu">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+          <ul class="nav-links">
             <li><a href="products.html">Clothing</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -33,9 +37,11 @@
         <div class="nav-right">
           <form role="search">
             <label for="searchbar"></label>
-            <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
+            <input class="searchbar" id="searchbar" type="text" placeholder="Search" />
           </form>
-          <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
+          <a href="bag.html" class="bag-icon"
+            ><img src="images/Bag-Icon.png" alt="Bag-Icon" /> <span id="bag-count"></span>
+          </a>
         </div>
       </div>
 
@@ -45,65 +51,32 @@
     </header>
 
     <main>
-      <h3 class="top-main-nav">
-        <a class="theme-color" href="index.html">Home </a> >
-        <a class="theme-color" href="products.html">Clothing</a> >
-        <a class="theme-color" href="product.html">Fleece</a>
-      </h3>
+      <div id="error-message"></div>
 
       <section class="main-product-container">
+        <div id="loading-indicator" class="loader productloader"></div>
         <div class="product-container">
           <div class="product">
-            <img class="product_img" src="images/product1.png" alt="jacket" >
-          </div>
-          <div class="product product1-zoom-top">
-            <img class="product_img" src="images/product1-zoom-top.png" alt="jacket" >
-          </div>
-          <div class="product product1-zoom-bottom">
-            <img class="product_img" src="images/product1-zoom-bottom.png" alt="jacket" >
-          </div>
-          <div class="product product1-zoom-left">
-            <img class="product_img" src="images/product1-zoom-left.png" alt="jacket" >
+            <img class="product_img" id="productImage" src="" alt="" />
           </div>
         </div>
 
         <div class="product-info-container">
           <div class="product-header">
-            <h1 class="margin0">Patagonia</h1>
-            <p>Better Sweater Fleece Jacket - Men's</p>
-            <p><span class="price">599,-</span> <s>1199,-</s></p>
+            <h1 class="margin0" id="productName"></h1>
+            <p id="productDescription"></p>
+            <p><span class="price" id="productDiscountedPrice"></span> <s id="productRegularPrice"></s></p>
           </div>
 
-          <div class="color_choice">
-            <h3>Select Color</h3>
-            <button class="color_button blue"></button>
-            <button type="button" class="color_button olive"></button>
+          <div id="productColor">
           </div>
 
-          <div class="size-list">
-            <h3>Select Size</h3>
-            <ul class="sizes">
-              <li class="size">XS</li>
-              <li class="size">S</li>
-              <li class="size">M</li>
-              <li class="size">L</li>
-              <li class="size">XL</li>
-            </ul>
+          <div id="productSizes">
           </div>
-
-          <a class="addtobag-button button" href="bag.html">ADD TO BAG</a>
 
           <div class="product-info">
-            <p>
-              Warm and comfortable jacket, with a clean look. This Patagonia Fleece Jacket strikes the right balance
-              with a lightweight, low-profile design that packs the heat with a soft feel.
-            </p>
-            <ul>
-              <li>Soft</li>
-              <li>Full-zip polyester jacket</li>
-              <li>Warm</li>
-              <li>Durable</li>
-            </ul>
+            <p id="productDetails"></p>
+            <ul id="productFeatures"></ul>
           </div>
         </div>
       </section>
@@ -111,34 +84,34 @@
       <h2 class="heading-suggestions">YOU MIGHT ALSO LIKE</h2>
       <section class="product-suggestions">
         <div class="product product2">
-          <a href="product.html"><img class="product_img" src="images/product2.png" alt="product2" ></a>
+          <a href="product.html"><img class="product_img" src="images/product2.png" alt="product2" /></a>
           <h3>First Watch</h3>
           <p>Ac-1100 Flotation Coat - Men's</p>
-          <p>1999,-</p>
+          <p>1999 kr</p>
         </div>
         <div class="product product3">
-          <a href="product.html"><img class="product_img" src="images/Product3.png" alt="product3" ></a>
+          <a href="product.html"><img class="product_img" src="images/Product3.png" alt="product3" /></a>
           <h3>Scott</h3>
           <p>Endurance WB jacket - Woman's</p>
-          <p>999,-</p>
+          <p>999 kr</p>
         </div>
         <div class="product product4">
-          <a href="product.html"><img class="product_img" src="images/product4.png" alt="product4" ></a>
+          <a href="product.html"><img class="product_img" src="images/product4.png" alt="product4" /></a>
           <h3>XM</h3>
           <p>Yacht Jacket - Unisex</p>
-          <p><span class="price">499,-</span> <s>999,-</s></p>
+          <p><span class="price">499 kr</span> <s>999 kr</s></p>
         </div>
         <div class="product product5">
-          <a href="product.html"><img class="product_img" src="images/product5.png" alt="product5" ></a>
+          <a href="product.html"><img class="product_img" src="images/product5.png" alt="product5" /></a>
           <h3>Swix</h3>
           <p>Focus Jacket - Softshell - Woman's</p>
-          <p><span class="price">599</span> <s>1199,-</s></p>
+          <p><span class="price">599 kr</span> <s>1199 kr</s></p>
         </div>
       </section>
     </main>
 
     <footer>
-      <img src="images/rainydays-logo2.png" id="logo2" alt="logo2" >
+      <img src="images/rainydays-logo2.png" id="logo2" alt="logo2" />
 
       <div class="about-us-container">
         <h3>ABOUT US</h3>
@@ -159,9 +132,10 @@
       </div>
 
       <div class="social-icons">
-        <img src="images/facebook-icon.png" alt="facebook" >
-        <img src="images/instagram-icon.png" alt="instagram" >
+        <img src="images/facebook-icon.png" alt="facebook" />
+        <img src="images/instagram-icon.png" alt="instagram" />
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

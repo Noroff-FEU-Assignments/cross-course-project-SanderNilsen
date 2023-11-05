@@ -3,31 +3,36 @@
 <html lang="en">
   <head>
     <title>Home | RainyDays</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="styles.css" >
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Homepage for RainyDays, where you'll find a wide 
     selection of high-quality jackets designed to keep you warm and protected in any weather.">
-    <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
+    <script src="js/index.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <input type="checkbox" id="menu-checkbox" >
-        <label for="menu-checkbox" class="hamburger_icon">
-          <i class="fas fa-bars"></i>
-        </label>
 
         <a class="logo" href="index.html" >
           <img class="logo-img" src="images/rainydays-logo1.png" alt="logo-header" >
         </a>
 
         <nav>
-          <ul>
-            <li><a href="products.html">Clothing</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <div class="hamburger-menu">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+              <div class="bar bar3"></div>
+          </div>
+          <ul class="nav-links">
+              <li><a href="products.html">Clothing</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
@@ -36,7 +41,9 @@
             <label for="searchbar"></label>
             <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
-          <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
+          <a href="bag.html" class="bag-icon"><img src="images/Bag-Icon.png" alt="Bag-Icon">
+            <span id="bag-count"></span> 
+          </a>
         </div>
       </div>
 
@@ -50,15 +57,13 @@
         <img src="images/main-mountain-background.jpg" alt="main-cover" >
       </div>
 
-      <a href="products.html">
-        <div class="slider">
-          <div class="slide">
+        <div class="slider-container">
+          <div class="slider">
             <img src="images/slide1-app.jpg" alt="slide 1" >
             <img src="images/slide2-hiking.jpg" alt="slide 2" >
             <img src="images/slide3-skiing.jpg" alt="slide 3" >
           </div>
         </div>
-      </a>
 
       <section class="categories_container">
         <div class="rectangle"></div>
@@ -103,21 +108,11 @@
         </div>
       </div>
 
-      <section class="scott-container">
-          <h2 class="scott_text">NEW arrivals from SCOTT</h2>
-          <div class="scott-product">
-            <p class="scott-price">999,-</p>
-            <img class="scott-img" src="images/product6.png" alt="Scott_Product" >
-          </div>
-          <div class="scott-product">
-            <p class="scott-price">999,-</p>
-            <img class="scott-img" src="images/product7.png" alt="Scott_Product" >
-          </div>
-          <div class="scott-product">
-            <p class="scott-price">999,-</p>
-            <img class="scott-img" src="images/product3.png" alt="Scott_Product" >
-          </div>
-      </section>
+      <section class="sale-container">
+          <h2 class="sale_text">SALE!<br>SALE!<br>SALE!<br>SALE!<br></h2> 
+          <div id="loading-indicator" class="loader"></div>
+        </section>
+
     </main>
 
     <footer>
@@ -146,5 +141,6 @@
         <img src="images/instagram-icon.png" alt="instagram" >
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

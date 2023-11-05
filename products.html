@@ -3,31 +3,36 @@
 <html lang="en">
   <head>
     <title>Clothing</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="styles.css" >
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta name="description" content="Collection of waterproof rain jackets,
     insulated winter jackets, lightweight windbreakers, and more. ">
-    <script src="https://kit.fontawesome.com/b318972c4d.js" crossorigin="anonymous"></script>
+    <script src="js/products.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <input type="checkbox" id="menu-checkbox" >
-        <label for="menu-checkbox" class="hamburger_icon">
-          <i class="fas fa-bars"></i>
-        </label>
 
         <a class="logo" href="index.html" >
           <img class="logo-img" src="images/rainydays-logo1.png" alt="logo-header" >
         </a>
 
         <nav>
-          <ul>
-            <li><a href="products.html">Clothing</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <div class="hamburger-menu">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+          <ul class="nav-links">
+              <li><a href="products.html">Clothing</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
@@ -36,7 +41,9 @@
             <label for="searchbar"></label>
             <input class="searchbar" id="searchbar" type="text" placeholder="Search" >
           </form>
-          <a href="bag.html"><img src="images/Bag-Icon.png" alt="Bag-Icon"></a>
+          <a href="bag.html" class="bag-icon"><img src="images/Bag-Icon.png" alt="Bag-Icon">
+            <span id="bag-count"></span> 
+          </a>
         </div>
       </div>
 
@@ -54,49 +61,9 @@
       <h1 class="top-main-nav">Jackets</h1>
 
       <section class="products_container">
-        <div class="product">
-          <a href="product.html"><img class="product_img transition transform" src="images/Product1.png" alt="product1" ></a>
-          <h3>Patagonia</h3>
-          <p>Better Sweater Fleece Jacket - Men's</p>
-          <p><span class="price">599,-</span> <s>1199,-</s></p>
-        </div>
-        <div class="product">
-          <a href="product.html"><img class="product_img" src="images/product2.png" alt="product2" ></a>
-          <h3>First Watch</h3>
-          <p>Ac-1100 Flotation Coat - Men's</p>
-          <p>1999,-</p>
-        </div>
-        <div class="product">
-          <a href="product.html"><img class="product_img" src="images/Product3.png" alt="product3" ></a>
-          <h3>Scott</h3>
-          <p>Endurance WB jacket - Woman's</p>
-          <p>999,-</p>
-        </div>
-        <div class="product">
-          <a href="product.html"><img class="product_img" src="images/product4.png" alt="product4" ></a>
-          <h3>XM</h3>
-          <p>Yacht Jacket - Unisex</p>
-          <p><span class="price">499,-</span> <s>999,-</s></p>
-        </div>
-        <div class="product">
-          <a href="product.html"><img class="product_img" src="images/product5.png" alt="product5" ></a>
-          <h3>Swix</h3>
-          <p>Focus Jacket - Softshell - Woman's</p>
-          <p><span class="price">599</span> <s>1199,-</s></p>
-        </div>
-        <div class="product">
-          <a href="product.html"><img class="product_img" src="images/product6.png" alt="product6" ></a>
-          <h3>Scott</h3>
-          <p>Lightweight Jacket - Unisex</p>
-          <p>1199,-</p>
-        </div>
-        <div class="product product7">
-          <a href="product.html"><img class="product_img" src="images/product7.png" alt="product7" ></a>
-          <h3>Scott</h3>
-          <p>Climate Hybrid Jacket - Men's</p>
-          <p><span class="price">599</span> <s>1199,-</s></p>
-        </div>
+        <div id="loading-indicator" class="loader"></div>
       </section>
+
     </main>
 
     <footer>
@@ -125,5 +92,6 @@
         <img src="images/instagram-icon.png" alt="instagram" >
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
