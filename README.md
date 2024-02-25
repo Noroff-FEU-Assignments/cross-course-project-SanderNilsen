@@ -25,4 +25,4 @@ This project marks my first experience with both web design and web coding. I ha
 - JavaScript
 
 ## Live website
-https://classy-duckanoo-15bd80.netlify.app
+https://shimmering-cascaron-7c224e.netlify.app/
