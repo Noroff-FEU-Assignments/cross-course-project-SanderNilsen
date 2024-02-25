@@ -25,7 +25,4 @@ This project marks my first experience with both web design and web coding. I ha
 - JavaScript
 
 ## Live website
-https://shimmering-cascaron-7c224e.netlify.app
-
-## Original repo 
-https://github.com/SanderNilsen/RainyDays.git
+https://classy-duckanoo-15bd80.netlify.app

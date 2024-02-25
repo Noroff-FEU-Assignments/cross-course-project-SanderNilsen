@@ -25,11 +25,11 @@ const loadingIndicator = document.getElementById('loading-indicator');
 loadingIndicator.style.display = 'block'; 
 
 // Fetch data from the Noroff API
-fetch('https://api.noroff.dev/api/v1/rainy-days')
+fetch("https://sandernilsen.com/wp-json/wc/store/products")
   .then(response => response.json())
   .then(data => {
     // Filter products where "onSale" is true
-    const onSaleProducts = data.filter(product => product.onSale === true);
+    const onSaleProducts = data.filter(product => product.on_sale === true);
 
     // Create HTML elements for on-sale products
     onSaleProducts.forEach(product => {
@@ -38,23 +38,24 @@ fetch('https://api.noroff.dev/api/v1/rainy-days')
 
       const productImage = document.createElement('img');
       productImage.classList.add('sale-img');
-      productImage.src = product.image;
+      productImage.src = product.images[0].src;
       productImage.alt = 'Sale-Product';
 
       const productTitle = document.createElement('h3');
       productTitle.classList.add('sale-title');
-      productTitle.textContent = product.title;
+      productTitle.textContent = product.name;
 
       const priceParagraph = document.createElement('p');
       priceParagraph.classList.add('sale-price');
-      priceParagraph.textContent = `${product.price} kr`;
+      priceParagraph.textContent = `${product.prices.regular_price} kr`; 
 
       const discountedPriceParagraph = document.createElement('p');
       discountedPriceParagraph.classList.add('sale-discountedPrice');
-      discountedPriceParagraph.textContent = `${product.discountedPrice} kr`;
+      discountedPriceParagraph.textContent = `${product.prices.sale_price} kr`;
 
       const productLink = document.createElement('a');
       productLink.href = `product.html?id=${product.id}`;
+      productLink.classList.add('viewdetailshome');
       productLink.textContent = 'View Details';
 
       productDiv.appendChild(productImage);

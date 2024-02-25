@@ -339,7 +339,7 @@ main {
 }
 
 .sale-discountedPrice {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bolder;
   color: rgb(255, 157, 157);
   margin: 0px;
@@ -365,6 +365,21 @@ button:hover {
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+}
+
+.viewdetailshome {
+  color: white;
+  background-color: #0a3641;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.viewdetailshome:hover {
+  transition: 0.2s all ease-in-out;
+  background-color: white;
+  color:#0a3641
 }
 
 /* Footer */
